@@ -12,7 +12,7 @@ const [text, setText] = useState("")
 const [result, setResult] = useState("")
 
 const addToText = (val) => {
-  setText((text) => [...text, val + " "])
+  setText((text) => [...text, val])
 };
 
 const resetInput = () => {
