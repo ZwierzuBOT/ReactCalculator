@@ -8,10 +8,12 @@
 }
 
 .result{
+    color: white;
     flex: 1;
     font-size: 24px;
 }
 .text{
+    color: white;
     flex: 1;
     font-size: 18px;
 }
