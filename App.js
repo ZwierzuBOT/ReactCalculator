@@ -8,8 +8,9 @@ import Input from "./components/Input";
 function App() {
 
 const buttonColor = "#f2a33c";
-const [text, setText] = useState("")
-const [result, setResult] = useState("")
+const anotherColor = "#a5a5a5";
+const [text, setText] = useState("");
+const [result, setResult] = useState("");
 
 const addToText = (val) => {
   setText((text) => [...text, val])
@@ -31,7 +32,9 @@ const calculateResult = () => {
       <div className="calc-wrapper">
 
       <Input text={text} result={result}/>
-
+        <div className="row">
+          <Button symbol={"AC"} color={anotherColor} handleClick={resetInput}/>
+        </div>
         <div className="row">
        <Button symbol={"7"} handleClick={addToText}/>
        <Button symbol={"8"} handleClick={addToText}/>
@@ -51,12 +54,10 @@ const calculateResult = () => {
        <Button symbol={"+"} color={buttonColor} handleClick={addToText}/>
         </div>
         <div className="row">
-       <Button symbol={"."} handleClick={addToText}/>
-       <Button symbol={"0"} handleClick={addToText}/>
-       <Button symbol={"-"} handleClick={addToText}/>
-       <Button symbol={"="} color={buttonColor} handleClick={calculateResult}/>
+       <Button id={"zero"}symbol={"0"} handleClick={addToText}/>
+       <Button id={"minus"}symbol={"-"} handleClick={addToText}/>
+       <Button id={"equals"}symbol={"="} color={buttonColor} handleClick={calculateResult}/>
         </div>
-        <Button symbol={"Clear"} color={"red"} handleClick={resetInput}/>
       </div>
     </div>
   );
